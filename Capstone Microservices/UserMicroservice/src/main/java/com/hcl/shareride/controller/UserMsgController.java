@@ -2,8 +2,10 @@ package com.hcl.shareride.controller;
 
 import java.util.List;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,15 +14,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hcl.shareride.entity.UserMessages;
-import com.hcl.shareride.service.UserMsgService;
+import com.hcl.shareride.service.IUserMsgService;
+
 
 @RestController // It is used for making restful web services
 @RequestMapping("/umessage") // used to map web requests
 
+
 public class UserMsgController {
 
 	@Autowired // used to inject the object dependency implicitly
-	UserMsgService userMsgService;
+	IUserMsgService userMsgService;
 
 	@PostMapping("/insert") /// to insert the data into database
 	public String AddMsg(@RequestBody UserMessages msg) {

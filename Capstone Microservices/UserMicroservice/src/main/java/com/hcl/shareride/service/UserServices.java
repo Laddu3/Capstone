@@ -5,29 +5,29 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hcl.shareride.entity.User;
-import com.shareride.repository.UserRepository;
+import com.hcl.shareride.entity.UserEntity;
+import com.hcl.shareride.repository.UserRepository;
 
 @Service //for business logic
-public class UserServices implements IUserService {
+public class UserServices implements IUserServices{
 	@Autowired  ////used to inject the object dependency implicitly
 	UserRepository userRepository;
 
 	//to add the data into data base
-	public User addUser(User user) {
+	public UserEntity addUser(UserEntity user) {
 
 		return userRepository.save(user);
 
 	}
 	///to retrieve the data from database
 
-	public List<User> getUsers() {
+	public List<UserEntity> getUsers() {
 
 		return userRepository.findAll();
 	}
 //to update the data in database
-	public User updateUser(Integer id, User user) {
-		User uuser = userRepository.findById(id).get();
+	public UserEntity updateUser(Integer id, UserEntity user) {
+		UserEntity uuser = userRepository.findById(id).get();
 
 		uuser.setUserName(user.getUserName());
 		uuser.setUserEmail(user.getUserEmail());

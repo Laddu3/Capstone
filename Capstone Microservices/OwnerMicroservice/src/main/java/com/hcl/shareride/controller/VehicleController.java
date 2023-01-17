@@ -2,6 +2,7 @@ package com.hcl.shareride.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hcl.shareride.entity.VehicleEntity;
-import com.hcl.shareride.service.VehicleServicesImp;
+import com.hcl.shareride.service.IVehicleService;
 
 @RestController  //It is used for making restful web services
 @RequestMapping("/vehicle") //used to map web requests
 
 public class VehicleController {
 	@Autowired  //used to inject the object dependency implicitly
-	VehicleServicesImp vehicleServices;
+	IVehicleService vehicleServices;
 	
 	@PostMapping("/insert") //to insert data into database
 	public String addVehicle(@RequestBody VehicleEntity vehicle)

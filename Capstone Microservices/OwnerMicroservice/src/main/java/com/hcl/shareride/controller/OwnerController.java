@@ -2,6 +2,7 @@ package com.hcl.shareride.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,14 +14,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hcl.shareride.entity.Owner;
-import com.hcl.shareride.service.OwnerServiceImp;
+import com.hcl.shareride.service.IOwnerService;
+
 
 @RestController  //It is used for making restful web services
 @RequestMapping("/owner")  //used to map web requests
 public class OwnerController {
 	
 	@Autowired  //used to inject the object dependency implicitly
-	OwnerServiceImp ownerServices;
+	IOwnerService ownerServices;
 	
 	@PostMapping("/insert") //to insert data into database
 	public String AddOwner(@RequestBody Owner owner)

@@ -1,4 +1,4 @@
-package com.shareride.repository;
+package com.hcl.shareride.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
