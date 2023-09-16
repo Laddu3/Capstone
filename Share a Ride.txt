@@ -1,0 +1,82 @@
+README 
+****************************************************************************************************************
+Project Title :   SHARERIDE
+
+
+ShareRide :
+An arrangement in which drivers of usually privately owned vehicles who wish to offer rides and passengers who 
+wish to obtain rides use a network (such as one accessed through an app or a website) to coordinate the sharing 
+of individual automobile trips for which the passengers pay a fare
+
+
+
+User part of shareride :
+*Login, Logout and Registration of user in application
+*Date and time of the ride of the user
+*Able to enter the pickup and dropping points
+*Able to select 2 wheeler or 4 wheeler and see list of them
+*Based on price, user should be filter the vehicle
+*Able to book the vehicle, message the vehicle owner, cancel my booking
+
+
+
+Owner part of shareride :
+* Login, Logout and Registration of owner in application
+*Share the details of vehicle to the user
+*Able to perform CRUD operation on vehicles
+*Able to enter the date, time and route of the vehicle
+*Able to get notification when vehicle gets booked
+*Able to reply and receive messages from the selected user
+*Able to confirm and cancel the booking of user
+
+
+
+Front End (ReactJS) :
+Installations:
+ *npm install react-router- dom
+ *npm install axios==================port no 3000
+ *npm install bootstrap
+
+
+Back End (Springboot) :
+*Eureka server=============Port no 8761
+*User microservice==========Port no 8084
+*Booking microservice=======Port no 8085
+
+
+Admin Micro Service: Operations
+*Register-------->/Register
+*Login------/Admin Login
+*GetAllVehicles-------->/ getVehicles
+*Get By Type---------->/ getVehicleByType
+*Add a ride------------->/ AddRide
+*Add Vehicle--------->/AddVehicle
+*Update Vehicle------->/UpdateVehicle
+*Delete Vehicle-------->/DeleteVehicle
+*Search By Id----------->/SearchVehicleById
+*Get Bookings---------->/getBookings
+*Update Booking Status--------->/UpdateBookingStatus
+*Cancel Ride---------->/CancelRide
+*Add User-------->/AddUser
+*Delete User-------->/DeleteUser
+*Update User-------->/UpdateUser
+*Get User------------->/GetUser
+*Logout------------>/logout
+
+
+User MS: Operations
+*Register-------->/Register
+*Login------/login
+*Get Rides--------/getRides
+*Get Rides By Type----------/getRidesByType
+*Book a ride-------------/BookRide
+*My Bookings-------/MyBookings
+*Cancel Ride----------/CancelRide
+*Logout------------/logout
+
+
+Cancel MS: Operations
+*Cancel By Id-----/CancelRide/{id}
+
+Booking MS: Operations
+*Book a Ride----/BookRide
